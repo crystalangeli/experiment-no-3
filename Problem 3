@@ -1,0 +1,66 @@
+#include <iostream>
+
+#include <string>
+
+
+
+
+
+std::string revstr(const std::string& str)
+
+{
+
+	auto begin = str.rbegin();
+
+	auto end = str.rend();
+
+	return std::string(begin, end);
+
+}
+
+
+
+std::string revstr(const char* str, size_t size)
+
+{
+
+	std::string newstring(str + '\0');
+
+	return revstr(newstring);
+
+}
+
+
+
+std::string get_input()
+
+{
+
+	std::string str;
+
+	std::cout << "input string to reverse: ";
+
+	std::getline(std::cin, str);
+
+	return str;
+
+}
+
+
+
+int main()
+
+{
+
+	auto str = get_input();
+
+	auto rev = revstr(str);
+	
+	auto begin = begin();
+
+	std::cout<< rev;
+
+	std::cin.get();
+
+	std::cin.get();
+  }
